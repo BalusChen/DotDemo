@@ -1,0 +1,71 @@
+digraph {
+    node [shape=record, fontname="Monaco", fontsize=10, penwidth=0.5]
+
+    ngx_module_t, ngx_core_module_t, ngx_event_module_t, ngx_http_module_t, ngx_mail_module_t
+    ngx_module_t[label="{
+        ngx_module_t
+        |
+        + ctx_indexl\l
+        + index\l
+        + name\l
+        + spare[0-1]\l
+        + version\l
+        + signature\l
+        + ctx\l
+        + commands\l
+        + type\l
+        + init_master\l
+        + init_module\l
+        + init_process\l
+        + init_thread\l
+        + exit_thread\l
+        + exit_process\l
+        + exit_master\l
+        + spare_hook[0-7]\l
+        |
+    }"]
+
+    ngx_core_module_t[label="{
+        ngx_core_module_t
+        |
+        + name\l
+        + create_conf\l
+        + init_conf\l
+        |
+    }"]
+
+    ngx_http_module_t[label="{
+        ngx_http_module_t
+        |
+        + preconfiguration\l
+        + postconfiguration\l
+        + create_main_conf\l
+        + init_main_conf\l
+        + create_srv_conf\l
+        + merge_srv_conf\l
+        + create_loc_conf\l
+        + merge_loc_conf\l
+        |
+    }"]
+
+    ngx_event_module_t[label="{
+        ngx_event_module_t
+        |
+        + name\l
+        + create_conf\l
+        + init_conf\l
+        + actions\l
+        |
+    }"]
+
+    ngx_mail_module_t[label="{
+        ngx_mail_module_t
+        |
+        + protocol\l
+        + create_main_conf\l
+        + init_main_conf\l
+        + create_srv_conf\l
+        + merge_srv_conf\l
+        |
+    }"]
+}
