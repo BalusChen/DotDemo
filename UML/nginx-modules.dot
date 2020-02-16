@@ -2,6 +2,14 @@ digraph {
     node [shape=record, fontname="Monaco", fontsize=10, penwidth=0.5]
 
     ngx_module_t, ngx_core_module_t, ngx_event_module_t, ngx_http_module_t, ngx_mail_module_t
+
+    {
+        ngx_module_t:ctx -> ngx_core_module_t
+        ngx_module_t:ctx -> ngx_event_module_t
+        ngx_module_t:ctx -> ngx_http_module_t
+        ngx_module_t:ctx -> ngx_mail_module_t
+    }
+
     ngx_module_t[label="{
         ngx_module_t
         |
@@ -11,7 +19,9 @@ digraph {
         + spare[0-1]\l
         + version\l
         + signature\l
-        + ctx\l
+        |
+        <ctx>+ ctx\l
+        |
         + commands\l
         + type\l
         + init_master\l
