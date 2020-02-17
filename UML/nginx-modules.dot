@@ -13,7 +13,7 @@ digraph {
     ngx_module_t[label="{
         ngx_module_t
         |
-        + ctx_indexl\l
+        + ctx_index\l
         + index\l
         + name\l
         + spare[0-1]\l
